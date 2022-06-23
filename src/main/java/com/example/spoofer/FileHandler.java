@@ -33,6 +33,11 @@ public class FileHandler {
         return img;
     }
 
+    public static void SaveImage(BufferedImage img, String filename) throws IOException {
+        File outputfile = new File(filename + ".jpg");
+        ImageIO.write(img, "jpg", outputfile);
+    }
+
     public static Image convertToFxImage(BufferedImage image) {
         // convert Buffered Img to Image
 
